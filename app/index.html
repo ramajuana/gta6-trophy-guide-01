@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Ledger — GTA VI Trophy Guide &amp; Tracker</title>
+<meta name="description" content="Offline guide and tracker for all 55 Grand Theft Auto VI trophies on PlayStation 5: official list, cited guides, platinum roadmap, missable flags, saved progress.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="brand">
+      <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; works offline</p>
+      <h1>Leonida Ledger</h1>
+      <p class="tagline">Every one of the 55 trophies — the official names, descriptions and grades, a guide that cites its sources, and a tracker that remembers where you are.</p>
+    </div>
+    <div class="progress-card" id="progressCard" aria-label="Overall progress">
+      <p class="big-count"><span id="earnedCount">0</span><span class="of"> / 55</span></p>
+      <p class="progress-label" id="progressLabel">earned &middot; 0% to the platinum</p>
+      <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+      <ul class="grade-counts" id="gradeCounts"></ul>
+    </div>
+  </div>
+  <nav class="tabs" id="tabs" aria-label="Sections">
+    <button type="button" data-view="tracker" class="tab active" aria-current="page">Tracker</button>
+    <button type="button" data-view="roadmap" class="tab">Roadmap to Platinum</button>
+    <button type="button" data-view="missables" class="tab">Missables</button>
+    <button type="button" data-view="about" class="tab">About &amp; sources</button>
+  </nav>
+</header>
+
+<main>
+  <section id="view-tracker" class="view">
+    <div class="toolbar" id="toolbar">
+      <label class="search-box">Search
+        <input id="searchInput" type="search" placeholder="Name, mission or keyword…" autocomplete="off">
+      </label>
+      <fieldset class="kind-filters" id="kindFilters" aria-label="Filter by kind"></fieldset>
+      <label class="select-wrap">Grade
+        <select id="gradeFilter">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="select-wrap">Show
+        <select id="statusFilter">
+          <option value="all">All trophies</option>
+          <option value="earned">Earned only</option>
+          <option value="remaining">Not yet earned</option>
+        </select>
+      </label>
+      <label class="spoiler-toggle"><input id="spoilerToggle" type="checkbox"> Hide story spoilers</label>
+      <span class="toolbar-spacer"></span>
+      <button id="exportBtn" type="button" class="export-btn">Export progress</button>
+      <label class="import-btn">Import progress <input id="importInput" type="file" accept="application/json,.json"></label>
+    </div>
+    <p class="list-meta" id="listMeta"></p>
+    <div class="split">
+      <div class="list-col">
+        <ol class="trophy-list" id="trophyList"></ol>
+        <p class="empty-note" id="emptyNote" hidden></p>
+      </div>
+      <aside class="detail-col" id="detailPane" aria-live="polite"></aside>
+    </div>
+  </section>
+
+  <section id="view-roadmap" class="view" hidden>
+    <p class="view-intro">The road to <strong>Vice Got a Price!</strong>, in three stages. Built from PowerPyx's trophy guide roadmap — about 200 hours, difficulty 4/10, one playthrough, no online trophies. Tick trophies off in the Tracker as you earn them; the stages below follow the same order.</p>
+    <div id="roadmapStages" class="roadmap-stages"></div>
+  </section>
+
+  <section id="view-missables" class="view" hidden>
+    <p class="view-intro">One trophy may be missable. Everything else can be finished in free roam after the story — that is PowerPyx's finding after playing the game, and this page says exactly what is known and what is not.</p>
+    <div id="missablesBody"></div>
+  </section>
+
+  <section id="view-about" class="view" hidden>
+    <div id="aboutBody" class="about-body"></div>
+  </section>
+</main>
+
+<footer>
+  <p>Leonida Ledger is an unofficial fan guide. Grand Theft Auto and GTA are trademarks of Rockstar Games; this guide uses no Rockstar logo, artwork or game screenshots. Trophy names and descriptions are shown as PlayStation publishes them. Guides are written in our own words and cite their sources beside each trophy.</p>
+  <p id="footerMeta"></p>
+</footer>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
